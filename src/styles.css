@@ -1,0 +1,1211 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    /* min-width: 1665px;; */
+}
+
+/* csss for navbar */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+    opacity: 1;
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.97);
+    padding: 0 1em;
+    width:100vw;
+    box-sizing: border-box;
+
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: black;
+    padding: 1em 0;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .navbar.show {
+    display: flex;
+  }
+  
+  .navbar-toggle {
+    display: none;
+    cursor: pointer;
+  }
+  
+  .logo {
+    font-size: 1.5em;
+  }
+  
+  .nav-list {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-list li {
+    margin: 1em;
+    font-size: 1.5em;
+  }
+  
+  .nav-list a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-list a:hover {
+    color: #BBDEFB;
+  }
+  
+  .btncontainer {
+    position: relative;
+    width: 2em;
+    /* margin: 10em; */
+    padding: 1em;
+  }
+  
+  .btn {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(-40%, -60%);
+    background-color: #AA4054;
+    color: white;
+    border: 1px solid white;
+    box-shadow: 5px 5px 10px 0 rgba(68.00000000000003, 41, 190, .12156862745098039);
+    border-radius: 10px;
+    font-family: "Montserrat", Sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    padding: 1em;
+    cursor: pointer;
+    animation: mymove 1s ease infinite;
+  }
+  
+    
+/* navbar ends */
+
+
+/* Modal CSS for form */
+
+/* Modal.css */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: white;
+    padding: 1.5em 2.5em;
+    width:40%;
+    height:60%;
+    border-radius: 8px;
+    transition: transform 5s ease-out;
+    transform: translateY(100%);
+  }
+  .modal>p{
+    text-align: center;
+    padding: 0.5em;
+    font-size: 1.5em;
+  }
+  .modal-header{
+    margin-bottom: 1.5em;
+  }
+  .modal-header>div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .modal-header>div>h2{
+    font-size: 3em;
+   
+  }
+  .modal-header>div>h3{
+    font-size: 1.5em;
+    padding: 0.5em;
+  }
+  .modal.show{
+    transform: translateY(0);
+  }
+
+  .modal-header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .close {
+    position: absolute;
+    top:1%;
+    right: 1%;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  /*Modal CSS ends here  */
+
+.App {
+    width: 100%;
+}
+
+
+
+.section1 {
+    background: transparent linear-gradient(244deg, #fde6cd, #ebebff) 0 0 no-repeat padding-box;
+    display: flex;
+    flex-direction: column;
+    padding-top: 5em;
+    width:100%;
+    box-sizing: border-box;
+    border: 1px solid #E0E0E0;
+
+}
+
+.toppanel-upper {
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.topleftupperpanel {
+    width: 60%;
+    max-width: 60%;
+    box-sizing: border-box;
+    padding: 4em;
+    margin: 1em 1em 1em 0;
+}
+
+.toprightupperpanel {
+    width: 40%;
+    max-width: 40%;
+    padding: 3em;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+.toppanel-lower {
+    box-sizing: border-box;
+    text-align: center;
+    padding: 0 em 4em 4em;
+}
+
+.toppanel-lower>p {
+    font-size: 1.34em;
+    padding: 0.3em;
+}
+
+
+
+.topleftupperpanel>h1 {
+    font-size: 3em;
+    width: 100%;
+    padding: 0.3em;
+}
+
+.topleftupperpanel>p {
+    font-size: 1.34em;
+    padding: 0.3em;
+}
+
+.topleftupperpanel>button {
+    /* padding: 0.6em 1em 0.6em 1em;*/
+    margin: 1em; 
+    cursor: pointer;
+}
+
+.form-container-outer {
+    padding: 1em 2.5em;
+    text-align: center;
+    border-radius: 3em;
+    background-color: white;
+    box-sizing: border-box;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.form-container>input,
+select {
+    background-color: #F7F7F7;
+    outline: none;
+    border: none;
+}
+
+.form-container>input,
+button,
+select {
+    padding: 1em;
+    border-radius: 10px;
+    margin: 0.5em 0;
+}
+
+.form-container>button {
+    background-color: #AA4054;
+    color: white;
+}
+
+.card-panel {
+    display: flex;
+    box-sizing: border-box;
+    width:100%;
+    max-width: 100%;
+    gap:1em;
+    
+}
+
+.card {
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.card>p {
+    font-size: 1.2em;
+}
+
+.imagesection {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    flex-wrap: wrap;
+
+}
+
+.image1 {
+    height: 87px;
+    width: 102px;
+    padding: 0.5em 1em;
+    padding: 0.5em;
+}
+
+@media screen and (max-width:910px) {
+    .toppanel-upper {
+        flex-direction: column;
+    }
+
+    .topleftupperpanel {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        padding: 4em;
+        margin: 1em 1em 1em 0;
+    }
+    
+    .toprightupperpanel {
+        width: 100%;
+        max-width: 100%;
+        padding: 4em;
+    }
+    
+}
+
+
+.section2 {
+    padding: 3em;
+    text-align: center;
+    width:100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #E0E0E0;
+}
+
+.section2>h1 {
+    font-size: 3em;
+    padding: 0.5em;
+}
+
+.section2>p {
+    font-size: 1.5em;
+    padding: 0.2em;
+}
+
+.card-panel2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:1em;
+}
+
+.card1 {
+    flex: 1 1 300px;
+    padding: 0.5em;
+    margin: 0.5em;
+}
+
+.card1>h3 {
+    font-size: 2em;
+    padding: 0.5em;
+}
+
+.card1>p {
+    font-size: 1.5em;
+    padding: 0.5em;
+}
+
+.image2{
+    width:16em;
+}
+.section3 {
+    display: flex;
+    justify-content: center;
+    /* width:100%;
+    max-width: 100%; */
+    align-items: center;
+    background-color: #FBFAF8;
+    padding: 3em;
+    border: 1px solid #E0E0E0;
+    box-sizing: border-box;
+    gap:1em;
+    
+}
+.section3left{
+  width:40%;
+  max-width: 40%;
+}
+
+.section3right{
+    width:40%;
+    max-width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: auto;
+}
+
+.section3left>h1{
+    font-size: 3em;
+    padding:0.5em 0;
+}
+.section3left>p{
+    font-size: 1.5em;
+    padding: 0.5em 0;
+}
+
+.image3{
+    max-width: 100%;
+}
+
+.section4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3em; 
+    border: 1px solid #E0E0E0;
+}
+
+.section4>h1{
+    color:#0A0753;
+    font-size: 3em;
+    padding:0.5em 0;
+}
+.image4{
+    width: 10em;
+    height: 4em;
+    padding: 1em 1em;
+}
+
+
+.section5{
+        justify-content: center;
+        align-items: center;
+        background-color: #FBFAF8;
+        padding: 3em 2em;
+        text-align: center;
+        border: 1px solid #E0E0E0;
+    }
+.section5inner{
+    display: flex;
+    flex-wrap: wrap;
+    padding:1em;
+    justify-content: center;
+}
+.section5>h1{
+    font-size: 3em;
+    padding:0.5em;
+}
+.section5inner>div{
+    width: 100%;
+    max-width: 300px;
+    box-sizing: border-box;
+    margin: 1em;
+}
+.section5inner>div>h3{
+    font-size: 2em;
+    padding:0.5em;
+}
+
+.section5inner>div>p{
+    font-size: 1.5em;
+    padding:0.5em;
+}
+.image5{
+    width: 100%; /* Make the image take full width of its container */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 100%; /* Ensure the image doesn't exceed its container width */
+    padding: 1em 0; /* Adjusted padding for smaller screens */
+}
+.section5>button{
+    margin:0.5em;
+}
+
+
+.section6{
+    width:100%;
+    max-width: 100%;
+    background-color: #F5F8FD;
+    border: 1px solid #E0E0E0;
+    box-sizing: border-box;
+}
+.container6{
+    max-width: 100%;
+    padding: 3em;
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+.section6left>h1{
+    font-size: 3em;
+    padding:0.5em;
+}
+.section6left{
+    width: 100%;
+}
+.section6right{
+    width: 100%;
+    text-align: center;
+}
+
+.section6right>h3{
+    font-size: 2em;
+    padding: 0.5em;
+}
+
+.section6right>button{
+    padding: 1em 2em;
+    margin: 1 1em;
+}
+
+.form-container-outer2 {
+    padding: 1em 1em;
+    text-align: center;
+    border-radius: 10%;
+    background-color: white;
+    box-sizing: border-box;
+}
+.image6{
+    width: 100%;
+    height: auto;
+    padding: 1em 2em;
+    
+}
+
+
+.section7{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3em;
+    border: 1px solid #E0E0E0;
+}
+.section7>h1{
+font-size: 2.5em;
+padding: 0.5em;
+}
+.section7>p{
+    font-size: 1.5em;
+    padding: 0.5em;
+    }
+.section7inner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3em;
+    width:100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+.section7inner>div{
+background-color: #FFFBE8;
+margin: 0.5em;
+padding: 1em;
+max-width: 18%;
+box-shadow:1px 1px 20px 0 rgba(68.00000000000003,41,190,.24);
+
+}
+
+.section7inner>div>h4{
+   font-size: 1em;
+    }
+
+.image7{
+    max-width: 100%;
+    max-height: 90px;
+}
+
+.section8{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 1px solid #E0E0E0;
+    padding: 1em
+}
+.section8>h3{
+    font-size: 2em;
+    border: 1px solid black;
+    padding: 0.2em 1em;
+}
+.section8>h1{
+    font-size: 4em;
+}
+.section8>p{
+    font-size: 1.5em;
+}
+
+
+/* styles for carousals */
+.carousel{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+.carousel-container {
+    position: relative;
+    width: 100%;
+  }
+  
+  .slides {
+    display: flex;
+    overflow: hidden;
+  }
+  
+  .slide {
+    flex: 0 0 33.33%;
+    min-width: 0;
+    box-sizing: border-box;
+    padding: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  
+  .arrow.left {
+    left: 10px;
+  }
+  
+  .arrow.right {
+    right: 10px;
+  }
+  .slide:hover {
+    transform: scale(1.1);
+  }
+  /* Styles for the carousal ends here */
+
+
+.section9{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 3em;
+        border: 1px solid #E0E0E0;
+        background-color: #FBFAF8;
+}
+.section9>h1{
+    font-size: 3em;
+    padding: 0.5em;
+}
+.section9inner{
+    display:flex;
+    justify-content: center;
+    gap:1em;
+    align-items: center;
+    box-sizing: border-box;
+    width:60%;
+    max-width: 60%;
+}
+.section9inner>div{
+    padding:0.2em;
+    }
+.section9inner>div>h4{
+    font-size: 1.5em;
+    padding: 0.5em;
+}
+.section9inner>div>p{
+    font-size: 1.3em;
+    padding: 0.5em;
+}
+.section9>button{
+    padding: 1em 2.5em;
+}
+
+
+.image9{
+    max-width: 100%;
+}
+
+
+.section10{
+    display: flex;
+    justify-content: center;
+    border: 1px solid #E0E0E0;
+    flex-direction: column;
+
+}
+.section10>h1{
+    text-align: center;
+    font-size: 3em;
+    padding: 0.5em;
+
+}
+.section10>p{
+    text-align: center;
+    font-size: 1.5em;
+    padding-top:0.5em;
+
+}
+.section10-accordion-container{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    padding: 0.5em;
+}
+.section10-accordion-container>div{
+    padding: 2em;
+}
+
+/* Styles for accordion */
+.accordion {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  .accordion-section {
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .accordion-header {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #A94054;
+    color: white;
+    max-width: 30em;
+    padding:1em;
+  }
+  
+  .accordion-header.active {
+    background-color: #A94054;
+  }
+  
+  .accordion-content {
+    padding: 10px;
+    max-width: 30em;
+  }
+  /* Styles for the accordion ends */
+
+
+  .section11{
+    border: 1px solid #E0E0E0;
+    text-align: center;
+  }
+  .section11>h1{
+    font-size: 3em;
+    padding: 0.5em;
+  }
+  .section11>p{
+    font-size: 1.5em;
+    padding: 0.5em;
+  }
+
+
+  /* reviews carousal */
+  .carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .slides {
+    display: flex;
+    overflow: hidden;
+  }
+  
+  .slide {
+    flex: 0 0 33.33%;
+    box-sizing: border-box;
+    padding: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .slide p {
+    margin: 0;
+  }
+  
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  
+  .arrow.left {
+    left: 10px;
+  }
+  
+  .arrow.right {
+    right: 10px;
+  }
+  
+  
+  /* review carousal ends here */
+.section12{
+background-color: #F5F8FD;
+border: 1px solid #E0E0E0;
+text-align: center;
+box-sizing: border-box;
+padding: 2em;
+}
+
+.section12>h1{
+    font-size: 3em;
+    padding: 0.5em;
+    }
+
+.review-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    padding:0.5em;
+}
+.image12{
+    max-height: 200px;
+    max-width: 33%;
+}
+.section12>h3{
+    font-size: 2em;
+    padding: 0.5em;
+}
+.section12>h4{
+    font-size: 1.4em;
+    padding: 0.2em;
+}
+.section12>button{
+    margin: 0.5em 1em;
+}
+.footer{
+    background-color: #AA4054;
+    position: relative;
+    flex-direction: column;
+    color: white;
+    padding: 1em 1em 0 1em;
+}
+
+.footerupper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footerupperinner>h2{
+font-size: 5em;;
+padding: 0.1em;
+}
+.footerupperinner>h3{
+    font-size: 1.1em;;
+    padding: 0.2em;
+    }
+.footerlower{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    
+   
+}
+
+.footerupperinner{
+    display: flex;
+    flex-direction: column;
+   gap:1em;
+}
+.footerupperinner>a{
+   text-decoration: none;
+   color: white;
+   cursor: pointer;
+}
+.extra>a{
+    text-decoration: none;
+    color: white;
+}
+
+.footer-social{
+    display: flex;
+}
+
+
+
+
+/* Icons Styling below this */
+.whatsapp-button {
+    position: absolute;
+    bottom: 3%;
+    right: 3%;
+    max-width: 50px;
+    z-index: 1000;
+
+}
+.visa-button{
+    margin: 0 0.2em;
+}
+.Insta-button{
+    margin: 0 0.3em;
+}
+
+.fb-button{
+    margin: 0 0.3em;
+}
+.Tweet-button{
+    margin: 0 0.3em;
+
+}
+.Linkedin-button{
+    margin: 0 0.3em;
+
+}
+
+
+
+@media screen and (max-width:1100px) {
+    .section5inner>div{
+        width: 100%;
+        max-width: 200px;
+        box-sizing: border-box;
+        margin: 1em;
+    }
+    .section9>h1{
+        font-size: 2.5em;
+    }
+    
+}
+
+
+@media screen and (max-width:880px) {
+    .modal {
+        padding: 2em 2em;
+    }
+    .modal>p{
+        text-align: center;
+        padding: 0.5em;
+        font-size: 1.2em;
+      }
+      .modal-header>div>h2{
+        font-size: 3em;
+       
+      }
+      .modal-header>div>h3{
+        font-size: 1.2em;
+        padding: 0.5em;
+      }
+    .toprightupperpanel {
+        padding-top: 0;
+    }
+    .section5inner>div{
+        width: 100%;
+        max-width: 200px;
+        box-sizing: border-box;
+        margin: 1em;
+    }
+
+    .section3{
+        flex-direction: column;
+    }
+    .section3left{
+       width: 100%;
+       max-width: 100%;
+       text-align: center;
+    }
+    .section3left>h1{
+       font-size: 2.5em;;
+     }
+     .section4>h1{
+        text-align: center;
+        font-size: 2.5em;
+     }
+
+     .section5>h1{
+        text-align: center;
+        font-size: 2.5em;
+     }   
+    .container6{
+        flex-direction: column;
+    }
+    .section7inner{
+        flex-wrap:wrap;
+    }
+    .image6{
+        width:80%;
+    }
+    .section9inner{
+        flex-wrap: wrap;
+        width:100%;
+        max-width: 100%; 
+    }
+    .section9inner>div{
+        width: 45%;
+    }
+}
+
+
+
+
+@media screen and (max-width:670px) {
+    .modal {
+        padding: 0.7em 2em;
+        text-align: center;
+        width: 50%;
+        height: 65%;
+    }
+    .modal>p{
+        text-align: center;
+        padding: 0.5em;
+        font-size: 1.2em;
+      }
+      .modal-header>div>h2{
+        font-size: 3em;
+       
+      }
+      .modal-header>div>h3{
+        font-size: 1.2em;
+        padding: 0.5em;
+      }
+  
+    .footerupper{
+        flex-direction: column;
+        text-align: center;
+        gap:1em;
+    }
+    .hide{
+        display: none;
+    }
+    .footer-social{
+        display: flex;
+        justify-content: center;
+    }
+    .extra>a{
+        text-decoration: none;
+        color: white;
+        margin: 0 0.3em;
+    }
+}
+
+
+
+@media screen and (max-width: 1865px) {
+    .btn{
+        display: none;
+    }
+}
+  @media screen and (max-width: 768px) {
+    .navbar {
+      display: none;
+    }
+
+  
+    .navbar.show {
+      display: flex;
+      position: fixed;
+      top: 60px; /* Adjust the top value based on your design */
+        left:0;
+    }
+  
+    .navbar-toggle {
+      display: block;
+    }
+  
+    .nav-list {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .nav-list li {
+      margin: 0.5em;
+    }
+    .topleftupperpanel{
+        padding-top:0em;
+    }
+  }
+  @media screen and (max-width: 525px) {
+    .image4{
+        width:7em;
+    }
+    .topleftupperpanel>h1{
+        font-size: 2em;
+        text-align: center;
+    }
+    .card-panel{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .section7inner{
+padding:0;
+    }
+    .section7inner>div{
+        min-width: 30%;
+    }
+        
+    
+
+    .section2>h1{
+        font-size: 2.5em;
+        width:100%;
+    }
+    .section5inner>div{
+        width:100%;
+    }
+    .section12>h1{
+        font-size: 2.5em;
+    }
+  }
+  @media screen and (max-width: 443px) {
+  
+        .modal {
+            padding: 0.7em 2em;
+            text-align: center;
+            width: 65%;
+            height: 65%;
+    }
+  }
+
+
+
+
+
+
+
+
+@keyframes mymove {
+    0% {
+        scale: 1;
+    }
+    25% {
+        scale: 1.1;
+    } 
+    50% {
+        scale: 1.2;
+    }
+    75% {
+        scale: 1.1;
+    }
+
+    100% {
+        scale: 1;
+    }
+
+
+}
+/* EnquiryPopUp.css */
+.enquiry-pop-up {
+    position: fixed;
+    left: -600px; /* Initially hidden to the left */
+    bottom: 20px; /* Adjust the top position as needed */
+    width: 300px;
+    /* background-color: #3498db; Set your desired background color */
+    color: #fff; /* Set your desired text color */
+    padding: 10px;
+    border-radius: 5px;
+    transition: left 0.5s ease-in-out;
+}
+
+.enquiry-pop-up.show {
+    left: 20px; /* Display at the desired position */
+}
+  .enquiry-pop-up {
+    
+  }
+ 
+  .content {
+    width: 300px;
+    height: 100px;
+    position: relative;
+    overflow: hidden;
+    background-color: white; 
+    /* Add your preferred background color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0.3em;
+    border: 2px solid black;
+    gap:0.5em;
+    border-radius: 20px;
+}
+.enquiry-content{
+    width: 80%;
+    color: black;
+}
+.enquiry-content-image{
+    width: 20%;
+}
+.enquiry-content-image>img{
+    border-radius: 50%;
+    width: 100%;
+    border: 1px solid black;
+}
+  .verifiedimg{
+    width: 30%;
+  }
+
